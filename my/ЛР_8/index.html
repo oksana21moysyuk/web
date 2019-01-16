@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <script src="script.js"></script>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>lab #8</title>
+  </head>
+  <body>
+    <div id="task1">
+      <h2>#1 Площа трикутника</h2>
+      <p>Точка А: x=<input type="text" placeholder="Write a value" class="x1"> y=<input type="text" placeholder="Write a value" class = "y1"></p>
+      <p>Точка Б: x=<input type="text" placeholder="Write a value" class="x2"> y=<input type="text" placeholder="Write a value" class = "y2"></p>
+      <p>Точка В: x=<input type="text" placeholder="Write a value" class="x3"> y=<input type="text" placeholder="Write a value" class = "y3"></p>
+      <p>Площа: <input type="text" placeholder="Result" class="answer" onfocus="task1()"></p>
+    </div>
+    <div id="task2">
+      <h2>#2 Заміна</h2>
+      <p>Поле 1: <input type="text" placeholder="Write a value" class="swap" ></p>
+      <p>Поле 2: <input type="text" placeholder="Write a value" class="swap" onblur="task2()"></p>
+    </div>
+    <div id="task3">
+      <h2>#3 Кількість максимальних місць в масиві</h2>
+      <p>Масив: <input type="text" placeholder="Write a value" class="arr"></p>
+      <p>Результат: <input type="text" placeholder="Result" class="result" onfocus="task3()"></p>
+    </div>
+    <div id="task4">
+      <h2>#4 Перевірити можливість побудови трикутника</h2>
+      <p>Довжина сторони 1: <input type="text" placeholder="Write a value" class="side1"></p>
+      <p>Довжина сторони 2: <input type="text" placeholder="Write a value" class="side2"></p>
+      <p>Довжини сторони 3: <input type="text" placeholder="Write a value" class="side3"></p>
+      <p>Результат: <input type="text" placeholder="Result" class="result" onfocus="task4()"></p>
+    </div>
+    <div id="task5">
+      <h2>#5 Змінити розмір зображення</h2>
+      <img src="./img/jazz-1.png" id="im1" onmouseover="task5('im1', 'over')" onmouseout="task5('im1', 'out')">
+    </div>
+    <div id="task6">
+      <h2>#6 Модифікація hr </h2>
+      <hr id="line" style="width:500px">
+      <button type="button" name="button" onclick="task6('smaller')">Зменшити</button>
+      <button type="button" name="button" onclick="task6('bigger')">Збільшити</button>
+      <button type="button" name="button" onclick="task6('left')">Вліво</button>
+      <button type="button" name="button" onclick="task6('right')">Вправо</button>
+    </div>
+    <div id="task7">
+      <h2>#7 Обработка анкети слушачей </h2>
+      <p>
+        Назва курсу:
+        <select class="form">
+          <option value="JS">JS</option>
+          <option value="HTML">HTML</option>
+          <option value="PHP">PHP</option>
+          <option value="JQuery">JQuery</option>
+        </select>
+      </p>
+      <p>Тривалість курсу:
+         <select class="form">
+           <option value = "1">1 тиждень</option>
+           <option value = "2">2 тиждень</option>
+           <option value = "3">3 тиждень</option>
+        </select>
+      </p>
+      <p>Мова викладання:
+        <select class="form">
+          <option value="eng">English</option>
+          <option value="ukr">Українська</option>
+          <option value="rus">Русский</option>
+          <option value="ger">Deutsch</option>
+        </select>
+      </p>
+      <p>Форма звітності:
+         <select class="form">
+           <option value = "online">Онлайн</option>
+           <option value = "ftf">Особиста</option>
+          </select>
+      </p>
+      <p>
+        <button type="button" name="button" onclick="task7()">До сплати</button>
+      </p>
+      <input type="text" placeholder="Result" class="form">
+    </div>
+    <div id="task8">
+      <h2>#8 Настройки таблиць </h2>
+      <table id = "table">
+        <tr>
+          <td onclick="task8(this, 'colour')"></td>
+          <td onclick="task8(this, 'colour')"></td>
+        </tr>
+        <tr>
+          <td onclick="task8(this, 'colour')"></td>
+          <td onclick="task8(this, 'colour')"></td>
+        </tr>
+      </table>
+      <p>
+        <select id="background" onchange="task8(this, 'background')">
+          <option value="bg1">Фон №1</option>
+          <option value="bg2">Фон №2</option>
+          <option value="bg3">Фон №3</option>
+        </select>
+      </p>
+    </div>
+    <div id="task9">
+      <h2>#9 Чек</h2>
+      <p>Назва товару: <input type="text" placeholder="Write a value" class="order"></p>
+      <p>Ціна: <input type="text" placeholder="Write a value" class="order"></p>
+      <p>Кількість: <input type="text" placeholder="Write a value" class="order"></p>
+      <p><button type="button" name="button" onclick="task9()">Добавить в чек</button></p>
+      <textarea class="order"></textarea>
+    </div>
+    <div id="task10">
+      <h2>#10 Інвертувати число </h2>
+      <p>Число: <input type="text" class="num" placeholder="Write a value" ></p>
+      <p>Інвертоване число: <input type="text" placeholder="Result" class="reverse" onfocus="task10()"></p>
+    </div>
+    <div id="task11">
+      <h2>#11 Пошук дільників</h2>
+      <p>Число: <input type="text" placeholder="Write a value" class="num"></p>
+      <p>Дільники: <input type="text" placeholder="Result" class="dividers"  onfocus="task11()"></p>
+    </div>
+    <div id="task12">
+      <h2>#12 Порахувати кількість щасливиз білетів</h2>
+      <p><button type="button" name="button" onclick="task12()">Порахувати</button></p>
+      <p>Кількість: <input type="text" placeholder="Result" id="ticket"></p>
+    </div>
+    <div id="task13">
+      <h2>#13 Визначити номер тижня в році</h2>
+      <p>Дата : <input type="text" placeholder="Write a value" class="week"></p>
+      <p><button type="button" name="button" onclick="task13()">Подсчитать</button></p>
+      <p>Номер тижня: <input type="text" placeholder="Result" class="week"></p>
+    </div>
+    <div id="task14">
+      <h2>#14 Визначення кількості слів</h2>
+      <p>Ваш текст:</p>
+      <textarea oninput="task14(this)" class="field"></textarea>
+      <p>Кількість: <input type="text" placeholder="Result" class="result"></p>
+    </div>
+    <div id="task15">
+      <h2>#15 Анімація</h2>
+        <p><button type="button" name="button" onclick="task15()">Старт</button></p>
+        <canvas id="canvas" width="700" height="300"></canvas>
+        <img src = "" id="image">
+    </div>
+    <div id="task16">
+      <h2>#16 Перевірка валідності електронної пошти</h2>
+      <p>Email: <input type="text" placeholder="Write a value" class="email"></p>
+      <p>Відповідь: <input type="text" placeholder="Result" class="result" onfocus="task16()"></p>
+    </div>
+  </body>
+</html>
